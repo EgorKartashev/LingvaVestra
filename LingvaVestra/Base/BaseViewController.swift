@@ -8,17 +8,18 @@
 import UIKit
 
 class BaseViewController: UIViewController {
-
+    
     // MARK: - Lifecycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         setupSubviews()
     }
-
+    
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
-
+        
         updateSubviews()
         updateConstraints()
     }
@@ -27,14 +28,14 @@ class BaseViewController: UIViewController {
 // MARK: - UITabBarController
 
 extension BaseViewController {
-
+    
     /// Sets the visibility of the tab bar.
     ///
     /// - Parameter hidden: A flag determining whether the tab bar should be hidden.
     func setupTabBar(hidden: Bool) {
         tabBarController?.tabBar.isHidden = hidden
     }
-
+    
     /// Switches the selected tab to a specific index.
     ///
     /// - Parameter index: The index of the tab to switch to.
@@ -46,14 +47,14 @@ extension BaseViewController {
 // MARK: - UINavigationController
 
 extension BaseViewController {
-
+    
     /// Sets the color of the navigation bar.
     ///
     /// - Parameter color: The color for the navigation bar.
     func setupNavigationBar(color: UIColor = .systemBackground) {
         navigationController?.navigationBar.barTintColor = color
     }
-
+    
     /// Sets the visibility of the navigation bar.
     ///
     /// - Parameters:
@@ -62,7 +63,7 @@ extension BaseViewController {
     func setupNavigationBar(hidden: Bool, animated: Bool = true) {
         navigationController?.setNavigationBarHidden(hidden, animated: animated)
     }
-
+    
     /// Pushes a view controller onto the navigation stack with an option for animation.
     ///
     /// - Parameters:
@@ -71,21 +72,21 @@ extension BaseViewController {
     func pushViewController(_ viewController: UIViewController, animated: Bool = true) {
         navigationController?.pushViewController(viewController, animated: animated)
     }
-
+    
     /// Pops the top view controller from the navigation stack with an option for animation.
     ///
     /// - Parameter animated: A flag determining whether to animate the transition.
     func popViewController(animated: Bool = true) {
         navigationController?.popViewController(animated: animated)
     }
-
+    
     /// Pops all the view controllers from the navigation stack except the root view controller.`.
     ///
     /// - Parameter animated: A flag determining whether to animate the transition.
     func popToRoot(animated: Bool = true) {
         navigationController?.popToRootViewController(animated: animated)
     }
-
+    
     /// Presents a view controller modally with a specified presentation style and animation option.
     ///
     /// - Parameters:
@@ -97,7 +98,7 @@ extension BaseViewController {
         viewController.modalPresentationStyle = presentationStyle
         present(viewController, animated: animated, completion: completionHandler)
     }
-
+    
     /// Dismisses the current view controller modally presented with an option for animation.
     ///
     /// - Parameter animated: A flag determining whether to animate the dismissal.
@@ -109,24 +110,24 @@ extension BaseViewController {
 // MARK: - Setup Subviews
 
 @objc extension BaseViewController {
-
+    
     /// Configures the subviews of the controller.
     func setupSubviews() {
         view.backgroundColor = .systemBackground
-
+        
         embedSubviews()
         setupConstraints()
     }
-
+    
     /// Embeds subviews into the controller's view.
     func embedSubviews() {}
-
+    
     /// Sets up constraints for the controller's subviews.
     func setupConstraints() {}
-
+    
     /// Updates the controller's subviews.
     func updateSubviews() {}
-
+    
     /// Updates constraints for the controller's subviews.
     func updateConstraints() {}
 }

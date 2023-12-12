@@ -13,14 +13,21 @@ enum Route {
 }
 
 protocol NavigationProtocol {
+    /// Sets the main window for the app.
     func setWindow(_ window: UIWindow?)
+
+    /// Navigates to a specific route
     func navigate(_ route: Route)
 }
 
 final class NavigationManager {
 
+    // MARK: - Properties
+
     static let shared = NavigationManager()
     private var window: UIWindow?
+
+    // MARK: - init
 
     private init() {}
 
@@ -44,7 +51,7 @@ extension NavigationManager: NavigationProtocol {
         case .auth:
             setRootController(createAuthViewController())
         case .tabBar:
-            setRootController(createTabBarController())
+            setRootController(createRootTabBarController())
         }
     }
 }
@@ -64,8 +71,7 @@ private extension NavigationManager {
         return navigationController
     }
 
-    func createTabBarController() -> UITabBarController {
-        // change later: return BaseTabBarController
-        UITabBarController()
+    func createRootTabBarController() -> UITabBarController {
+        BaseTabBarController(barType: .root)
     }
 }

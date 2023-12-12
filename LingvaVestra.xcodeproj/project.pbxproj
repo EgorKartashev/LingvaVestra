@@ -18,6 +18,14 @@
 		A054D5BD2B21DEE800BC30B3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054D5BC2B21DEE800BC30B3 /* BaseViewController.swift */; };
 		A054D5BF2B22FB2300BC30B3 /* NavigationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054D5BE2B22FB2300BC30B3 /* NavigationManager.swift */; };
 		A054D5C12B2302F300BC30B3 /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A054D5C02B2302F300BC30B3 /* AuthViewController.swift */; };
+		A065B3572B247E4D00589B98 /* TabDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = A065B3562B247E4D00589B98 /* TabDetail.swift */; };
+		A08CCC1F2B28359100EAC318 /* MainRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A08CCC1E2B28359100EAC318 /* MainRouter.swift */; };
+		A0A572AF2B245844000452DF /* BaseTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A572AE2B245844000452DF /* BaseTabBarController.swift */; };
+		A0A572B22B245B4F000452DF /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A572B12B245B4F000452DF /* MainViewController.swift */; };
+		A0A572B42B245B6E000452DF /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A572B32B245B6E000452DF /* MainPresenter.swift */; };
+		A0A572B62B245B7B000452DF /* MainAssembler.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A572B52B245B7B000452DF /* MainAssembler.swift */; };
+		A0A572B82B24676C000452DF /* BaseViewProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A572B72B24676C000452DF /* BaseViewProtocol.swift */; };
+		A0A572BA2B2467BD000452DF /* BasePresenterProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = A0A572B92B2467BD000452DF /* BasePresenterProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +40,14 @@
 		A054D5BC2B21DEE800BC30B3 /* BaseViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		A054D5BE2B22FB2300BC30B3 /* NavigationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationManager.swift; sourceTree = "<group>"; };
 		A054D5C02B2302F300BC30B3 /* AuthViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		A065B3562B247E4D00589B98 /* TabDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabDetail.swift; sourceTree = "<group>"; };
+		A08CCC1E2B28359100EAC318 /* MainRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainRouter.swift; sourceTree = "<group>"; };
+		A0A572AE2B245844000452DF /* BaseTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarController.swift; sourceTree = "<group>"; };
+		A0A572B12B245B4F000452DF /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		A0A572B32B245B6E000452DF /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
+		A0A572B52B245B7B000452DF /* MainAssembler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainAssembler.swift; sourceTree = "<group>"; };
+		A0A572B72B24676C000452DF /* BaseViewProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseViewProtocol.swift; sourceTree = "<group>"; };
+		A0A572B92B2467BD000452DF /* BasePresenterProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BasePresenterProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,15 +85,47 @@
 				747CC1702B1FA3A50017DBA0 /* AppDelegate.swift */,
 				747CC1722B1FA3A50017DBA0 /* SceneDelegate.swift */,
 				747CC1742B1FA3A50017DBA0 /* ViewController.swift */,
-				A054D5BC2B21DEE800BC30B3 /* BaseViewController.swift */,
+				A065B3562B247E4D00589B98 /* TabDetail.swift */,
 				A054D5C02B2302F300BC30B3 /* AuthViewController.swift */,
 				A054D5BE2B22FB2300BC30B3 /* NavigationManager.swift */,
+				A065B3582B24817900589B98 /* RootTabBar */,
+				A048BFC32B2493FA000E714B /* Base */,
 				747CC1762B1FA3A50017DBA0 /* Main.storyboard */,
 				747CC1792B1FA3A60017DBA0 /* Assets.xcassets */,
 				747CC17B2B1FA3A60017DBA0 /* LaunchScreen.storyboard */,
 				747CC17E2B1FA3A60017DBA0 /* Info.plist */,
 			);
 			path = LingvaVestra;
+			sourceTree = "<group>";
+		};
+		A048BFC32B2493FA000E714B /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				A054D5BC2B21DEE800BC30B3 /* BaseViewController.swift */,
+				A0A572AE2B245844000452DF /* BaseTabBarController.swift */,
+				A0A572B72B24676C000452DF /* BaseViewProtocol.swift */,
+				A0A572B92B2467BD000452DF /* BasePresenterProtocol.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		A065B3582B24817900589B98 /* RootTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				A0A572B02B245B08000452DF /* Main */,
+			);
+			path = RootTabBar;
+			sourceTree = "<group>";
+		};
+		A0A572B02B245B08000452DF /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				A0A572B12B245B4F000452DF /* MainViewController.swift */,
+				A0A572B32B245B6E000452DF /* MainPresenter.swift */,
+				A0A572B52B245B7B000452DF /* MainAssembler.swift */,
+				A08CCC1E2B28359100EAC318 /* MainRouter.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -181,12 +229,20 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A0A572AF2B245844000452DF /* BaseTabBarController.swift in Sources */,
+				A08CCC1F2B28359100EAC318 /* MainRouter.swift in Sources */,
 				A054D5C12B2302F300BC30B3 /* AuthViewController.swift in Sources */,
 				747CC1752B1FA3A50017DBA0 /* ViewController.swift in Sources */,
 				A054D5BD2B21DEE800BC30B3 /* BaseViewController.swift in Sources */,
+				A0A572B42B245B6E000452DF /* MainPresenter.swift in Sources */,
 				747CC1712B1FA3A50017DBA0 /* AppDelegate.swift in Sources */,
 				747CC1732B1FA3A50017DBA0 /* SceneDelegate.swift in Sources */,
 				A054D5BF2B22FB2300BC30B3 /* NavigationManager.swift in Sources */,
+				A0A572BA2B2467BD000452DF /* BasePresenterProtocol.swift in Sources */,
+				A0A572B22B245B4F000452DF /* MainViewController.swift in Sources */,
+				A0A572B82B24676C000452DF /* BaseViewProtocol.swift in Sources */,
+				A065B3572B247E4D00589B98 /* TabDetail.swift in Sources */,
+				A0A572B62B245B7B000452DF /* MainAssembler.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

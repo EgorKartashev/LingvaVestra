@@ -21,6 +21,6 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         navigationManager.setWindow(window)
 
         // change later: checking if authorized and set the root
-        navigationManager.navigate(.auth)
+        navigationManager.navigate(.tabBar)
     }
 }
